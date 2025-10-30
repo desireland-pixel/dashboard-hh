@@ -6,7 +6,7 @@ st.set_page_config(page_title="Profit Calculator", layout="wide")
 st.title("💰 Profit Calculator Dashboard")
 
 # --- Create two columns ---
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 
 # --- Left column: Expense inputs ---
 with col1:
