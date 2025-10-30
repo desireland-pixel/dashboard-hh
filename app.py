@@ -24,9 +24,8 @@ with col2:
     
 # --- Right column: Income inputs ---
 with col3:
-    st.header("💵 Income")
-    orders = st.number_input("Number of Orders (period)", value=1000, step=1)
-    AOV = st.number_input("Average Order Value (AOV)", value=12.0, step=0.5)
+    st.header("💵 Trial")
+    trial = st.number_input("Number of Orders (period)", value=1000, step=1)
 
 # --- Calculations ---
 income = orders * AOV
