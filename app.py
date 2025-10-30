@@ -64,7 +64,7 @@ fig.add_vline(
 fig.update_layout(
     title="Income vs Expenses Over Order Volume",
     xaxis_title="Number of Orders",
-    yaxis_title="Amount ($)",
+    yaxis_title="Amount (€)",
     hovermode="x unified",
     template="plotly_white"
 )
