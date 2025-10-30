@@ -19,7 +19,7 @@ with col1:
 # --- Middle column: Income inputs ---
 with col2:
     st.header("💸 Income")
-    orders = st.number_input("Number of Orders (period)", value=1000, step=1, width=200)
+    orders = st.number_input("Number of Orders (monthly)", value=3000, step=50, width=200)
     AOV = st.number_input("Average Order Value (AOV)", value=12.0, step=0.5, width=200)
 
 # --- Calculations ---
