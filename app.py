@@ -12,15 +12,15 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.header("🧾 Expenses")
     workers = st.slider("Number of Workers", 1, 200, 10)
-    hourly_wage = st.number_input("Hourly Wage (per hour)", value=15.0, step=0.5, width=150)
-    hours_per_worker = st.number_input("Hours per Worker (period)", value=160, step=1, width=150)
-    fixed_cost = st.number_input("Fixed Cost (period)", value=5000.0, step=1.0, width=150)
+    hourly_wage = st.number_input("Hourly Wage (per hour)", value=15.0, step=0.5, width=200)
+    hours_per_worker = st.number_input("Hours per Worker (period)", value=160, step=1, width=200)
+    fixed_cost = st.number_input("Fixed Cost (period)", value=5000.0, step=1.0, width=200)
 
 # --- Middle column: Income inputs ---
 with col2:
     st.header("💵 Income")
-    orders = st.number_input("Number of Orders (period)", value=1000, step=1)
-    AOV = st.number_input("Average Order Value (AOV)", value=12.0, step=0.5)
+    orders = st.number_input("Number of Orders (period)", value=1000, step=1, width=200)
+    AOV = st.number_input("Average Order Value (AOV)", value=12.0, step=0.5, width=200)
 
 # --- Calculations ---
 income = orders * AOV
