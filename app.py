@@ -25,7 +25,10 @@ with col2:
 # --- Right column: Income inputs ---
 with col3:
     st.header("💵 Trial")
-    trial = st.number_input("Number of Orders (period)", value=1000, step=1)
+    st.metric("Net Income", f"${income:,.2f}")
+    st.metric("Net Expenses", f"${expenses:,.2f}")
+    st.metric("Net Profit", f"${profit:,.2f}")
+
 
 # --- Calculations ---
 income = orders * AOV
