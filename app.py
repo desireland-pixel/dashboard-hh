@@ -24,25 +24,15 @@ with col2:
     
 # --- Right column: Income inputs ---
 with col3:
-    st.header("💵 Trial")
+    st.header("📊 Results")
     st.metric("Net Income", f"${income:,.2f}")
     st.metric("Net Expenses", f"${expenses:,.2f}")
     st.metric("Net Profit", f"${profit:,.2f}")
-
 
 # --- Calculations ---
 income = orders * AOV
 expenses = (workers * hourly_wage * hours_per_worker) + fixed_cost
 profit = income - expenses
-
-# --- Results section ---
-st.markdown("---")
-st.header("📊 Results")
-
-col3, col4, col5 = st.columns(3)
-col3.metric("Net Income", f"${income:,.2f}")
-col4.metric("Net Expenses", f"${expenses:,.2f}")
-col5.metric("Net Profit", f"${profit:,.2f}")
 
 # --- Simulate a dynamic range for visualization ---
 # This creates data points showing how income/expenses vary as orders increase
