@@ -3,7 +3,7 @@ import plotly.graph_objects as go
 
 st.set_page_config(page_title="Profit Calculator", layout="wide")
 
-st.title("💰 Profit Calculator Dashboard")
+st.title("💰 Profit Calculator Dashboard (Monthly)")
 
 # --- Create two columns ---
 col1, col2, col3 = st.columns(3)
