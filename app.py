@@ -11,14 +11,14 @@ col1, col2, col3 = st.columns(3)
 # --- Left column: Expense inputs ---
 with col1:
     st.header("🧾 Expenses")
-    workers = st.slider("Number of Workers", 1, 200, 10, width=300)
+    workers = st.slider("Number of Workers", 1, 200, 10, width=400)
     hourly_wage = st.number_input("Hourly Wage (per hour)", value=15.0, step=0.5, width=200)
     hours_per_worker = st.number_input("Hours per Worker (period)", value=160, step=1, width=200)
-    fixed_cost = st.number_input("Fixed Cost (period)", value=5000.0, step=10.0, width=200)
+    fixed_cost = st.number_input("Fixed Cost (period)", value=5000.0, step=100.0, width=200)
 
 # --- Middle column: Income inputs ---
 with col2:
-    st.header("💵 Income")
+    st.header("💸 Income")
     orders = st.number_input("Number of Orders (period)", value=1000, step=1, width=200)
     AOV = st.number_input("Average Order Value (AOV)", value=12.0, step=0.5, width=200)
 
@@ -29,10 +29,10 @@ profit = income - expenses
 
 # --- Right column: Income inputs ---
 with col3:
-    st.header("📊💵 Results")
-    st.metric("Net Income", f"${income:,.2f}")
-    st.metric("Net Expenses", f"${expenses:,.2f}")
-    st.metric("Net Profit", f"${profit:,.2f}")
+    st.header("💵 Results")
+    st.metric("Net Income", f"€{income:,.2f}")
+    st.metric("Net Expenses", f"€{expenses:,.2f}")
+    st.metric("Net Profit", f"€{profit:,.2f}")
 
 # --- Simulate a dynamic range for visualization ---
 # This creates data points showing how income/expenses vary as orders increase
