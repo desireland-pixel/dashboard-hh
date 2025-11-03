@@ -38,7 +38,7 @@ with col3:
 # --- Simulate a dynamic range for visualization ---
 # This creates data points showing how income/expenses vary as orders increase
 order_range = list(range(0, int(orders * 1.5), max(1, int(orders / 50))))
-income_values = [o * AOV for o in order_range]
+income_values = [(o * AOV * commission * 0.01) for o in order_range]
 expense_values = [(workers * hourly_wage * hours_per_worker) + fixed_cost for _ in order_range]
 
 # --- Plotly interactive line chart ---
