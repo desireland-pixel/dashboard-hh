@@ -11,7 +11,7 @@ col1, col2, col3 = st.columns(3)
 # --- Left column: Expense inputs ---
 with col1:
     st.header("🧾 Expenses")
-    workers = st.slider("Number of Partners", 1, 200, 10, width=400)
+    workers = st.slider("Number of Partners", 1, 200, 30, width=400)
     hourly_wage = st.number_input("Hourly Wage", value=15.0, step=0.5, width=200)
     hours_per_worker = st.number_input("Hours per Partner (monthly)", value=160, step=1, width=200)
     fixed_cost = st.number_input("Fixed Cost", value=5000.0, step=100.0, width=200)
