@@ -21,7 +21,7 @@ with col2:
     st.header("💸 Income")
     orders = st.number_input("Number of Orders (monthly)", value=3000, step=50, width=200)
     AOV = st.number_input("Average Order Value (AOV)", value=12.0, step=0.5, width=200)
-    commission = st.number_input("Commission (in %)", value=25.0, step=1.0, width=200)
+    commission = st.number_input("Commission (in %)", value=25.0, step=1.0, max_value=40.0, width=200)
 
 # --- Calculations ---
 income = orders * AOV * commission * 0.01
